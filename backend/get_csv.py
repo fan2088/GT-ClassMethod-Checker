@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import Select
 import csv
 
 def get_data_csv(major, semester):
-    DRIVER_PATH = '/Users/shugefan/Desktop/Flask Into/backend/chromedriver'
+    DRIVER_PATH = '/chromedriver'
     GT_WEBSITE_PATH = "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_dyn_sched"
     driver = webdriver.Chrome(DRIVER_PATH)
 

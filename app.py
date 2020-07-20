@@ -38,7 +38,6 @@ def search():
     else:
         result = find_valid_result(data, className, sectionName)
     DEFAULT_MAJOR = subject
-    print(DEFAULT_MAJOR)
     return render_template('index.html', content = result, subject=DEFAULT_MAJOR)
 
 if __name__=="__main__":

@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% block header %}{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Is My Class online?</h1>
+    <p>Warning: Might be inaccurate, double check on Buzzport before making any life-changing decisions.</p>
+</div>
+<form method="POST">
+    <div class="form-group">
+        <label>Subject: </label>
+        <select class="form-control" name="subjectName">
+            <option value={{subject}} selected>{{subject}}</option>
+            <option value="Accounting">Accounting</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Air Force Aerospace Studies">Air Force Aerospace Studies</option>
+            <option value="Applied Physiology">Applied Physiology</option>
+            <option value="Applied Systems Engineering">Applied Systems Engineering</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Biological Sciences">Biological Sciences</option>
+            <option value="Biology">Biology</option>
+            <option value="Biomed Engr/Joint Emory PKU">Biomed Engr/Joint Emory PKU</option>
+            <option value="Biomedical Engineering">Biomedical Engineering</option>
+            <option value="Biomedical Engr/Joint Emory">Biomedical Engr/Joint Emory</option>
+            <option value="Bldg Construction-Professional">Bldg Construction-Professional</option>
+            <option value="Building Construction">Building Construction</option>
+            <option value="Center Enhancement-Teach/Learn">Center Enhancement-Teach/Learn</option>
+            <option value="Chemical &amp; Biomolecular Engr">Chemical &amp; Biomolecular Engr</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Chinese">Chinese</option>
+            <option value="City Planning">City Planning</option>
+            <option value="Civil and Environmental Engr">Civil and Environmental Engr</option>
+            <option value="College of Architecture">College of Architecture</option>
+            <option value="College of Engineering">College of Engineering</option>
+            <option value="Computational Mod, Sim, &amp; Data">Computational Mod, Sim, &amp; Data</option>
+            <option value="Computational Science &amp; Engr">Computational Science &amp; Engr</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Cooperative Work Assignment">Cooperative Work Assignment</option>
+            <option value="Cross Enrollment">Cross Enrollment</option>
+            <option value="Earth and Atmospheric Sciences">Earth and Atmospheric Sciences</option>
+            <option value="Economics">Economics</option>
+            <option value="Elect &amp; Comp Engr-Professional">Elect &amp; Comp Engr-Professional</option>
+            <option value="Electrical &amp; Computer Engr">Electrical &amp; Computer Engr</option>
+            <option value="English">English</option>
+            <option value="Foreign Studies">Foreign Studies</option>
+            <option value="French">French</option>
+            <option value="Georgia Tech">Georgia Tech</option>
+            <option value="Georgia Tech Lorraine">Georgia Tech Lorraine</option>
+            <option value="German">German</option>
+            <option value="Global Media and Cultures">Global Media and Cultures</option>
+            <option value="Health Systems">Health Systems</option>
+            <option value="Hebrew">Hebrew</option>
+            <option value="Hindi">Hindi</option>
+            <option value="History">History</option>
+            <option value="History, Technology &amp; Society">History, Technology &amp; Society</option>
+            <option value="Industrial &amp; Systems Engr">Industrial &amp; Systems Engr</option>
+            <option value="Industrial Design">Industrial Design</option>
+            <option value="Int'l Plan Co-op Abroad">Int'l Plan Co-op Abroad</option>
+            <option value="Int'l Plan Intern Abroad">Int'l Plan Intern Abroad</option>
+            <option value="Int'l Plan-Exchange Program">Int'l Plan-Exchange Program</option>
+            <option value="Int'l Plan-Study Abroad">Int'l Plan-Study Abroad</option>
+            <option value="International Affairs">International Affairs</option>
+            <option value="International Logistics">International Logistics</option>
+            <option value="Internship">Internship</option>
+            <option value="Intl Executive MBA">Intl Executive MBA</option>
+            <option value="Ivan Allen College">Ivan Allen College</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+            <option value="Learning Support">Learning Support</option>
+            <option value="Linguistics">Linguistics</option>
+            <option value="Literature, Media &amp; Comm">Literature, Media &amp; Comm</option>
+            <option value="Management">Management</option>
+            <option value="Management of Technology">Management of Technology</option>
+            <option value="Materials Science &amp; Engr">Materials Science &amp; Engr</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Medical Physics">Medical Physics</option>
+            <option value="Military Science &amp; Leadership">Military Science &amp; Leadership</option>
+            <option value="Modern Languages">Modern Languages</option>
+            <option value="Music">Music</option>
+            <option value="Naval Science">Naval Science</option>
+            <option value="Neuroscience">Neuroscience</option>
+            <option value="Nuclear &amp; Radiological Engr">Nuclear &amp; Radiological Engr</option>
+            <option value="Persian">Persian</option>
+            <option value="Philosophy">Philosophy</option>
+            <option value="Physics">Physics</option>
+            <option value="Political Science">Political Science</option>
+            <option value="Polymer, Textile and Fiber Eng">Polymer, Textile and Fiber Eng</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Psychology">Psychology</option>
+            <option value="Public Policy">Public Policy</option>
+            <option value="Public Policy/Joint GSU PhD">Public Policy/Joint GSU PhD</option>
+            <option value="Russian">Russian</option>
+            <option value="Serve, Learn, Sustain">Serve, Learn, Sustain</option>
+            <option value="Sociology">Sociology</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Swahili">Swahili</option>
+            <option value="Vertically Integrated Project">Vertically Integrated Project</option>
+            <option value="Wolof">Wolof</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Class Name: </label>
+        <input type="text" class="form-control" name="className" placeholder="Your class name">
+    </div>
+
+    <div class="form-group">
+        <label>Section: </label>
+        <input type="text" class="form-control" name="sectionName" placeholder="Your section number">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class Name</th>
+            <th>Section</th>
+            <th>Class Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for element in content: %}
+    <tr>
+        <td>{{ element.Class }}</td>
+        <td>{{ element.Section }}</td>
+        <td>{{ element.Type }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

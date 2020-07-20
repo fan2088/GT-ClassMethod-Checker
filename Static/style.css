@@ -1,0 +1,32 @@
+body {
+    margin: 40px !important;
+}
+p {
+    font-size: 20px;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+form>div {
+    margin: 25px;
+}
+select {
+    width: 270px !important;
+}
+
+button {
+    height: 40px !important;
+    margin: 53px 15px!important;
+}
+
+table {
+    margin: 30px auto !important;
+    font-size: 17px !important;
+    width: 70% !important;
+}
+
+thead {
+    background-color: aqua;
+}

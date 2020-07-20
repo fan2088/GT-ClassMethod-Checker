@@ -11,11 +11,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CSV_File_Path = './result.csv'
 Json_File_Path = './result.json'
-DEFAULT_MAJOR = ''
+DEFAULT_MAJOR = 'Accounting'
 
 @app.route('/', methods=['GET'])
 def index():
-    DEFAULT_MAJOR = 'Accounting'
     get_data_csv(DEFAULT_MAJOR, "Fall 2020")
     CSV_TO_JSON(CSV_File_Path, Json_File_Path)
     with open(Json_File_Path) as json_file:
